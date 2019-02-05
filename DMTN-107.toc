@@ -1,0 +1,12 @@
+\babel@toc {english}{}
+\babel@toc {english}{}
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}
+\contentsline {section}{\numberline {2}Relevant Requirements, Specifications, and Plans}{1}{section.2}
+\contentsline {subsection}{\numberline {2.1}Associated requirements and plans to also consider.}{2}{subsection.2.1}
+\contentsline {section}{\numberline {3}Potential Solutions}{3}{section.3}
+\contentsline {subsection}{\numberline {3.1}Do Nothing}{4}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Commissioning Data Templates}{5}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Continuous Template Generation}{6}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Image-Image Differencing}{7}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Catalog Differencing}{7}{subsection.3.5}
+\contentsline {section}{\numberline {4}Recommendations}{8}{section.4}
