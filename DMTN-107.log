@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  4 FEB 2019 16:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  4 FEB 2019 17:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1328,7 +1328,7 @@ number indent by \l@... (toc, 2):  16.42499pt
 text indent by \l@... (toc, 2):  25.18501pt
 number indent by parent (toc, 2):  11.71648pt
 text indent calculated (toc, 2): 20.89256pt
-number indent calculated (toc, 2): 16.42499pt
+number indent calculated (toc, 2): 11.71648pt
 number indent by \l@... (toc, 1):  0.0pt
 text indent by \l@... (toc, 1):  16.42499pt
 number indent by parent (toc, 1):  0.0pt
@@ -1338,27 +1338,27 @@ number indent by \l@... (toc, 2):  16.42499pt
 text indent by \l@... (toc, 2):  25.18501pt
 number indent by parent (toc, 2):  11.71648pt
 text indent calculated (toc, 2): 20.89256pt
-number indent calculated (toc, 2): 16.42499pt
+number indent calculated (toc, 2): 11.71648pt
 number indent by \l@... (toc, 2):  16.42499pt
 text indent by \l@... (toc, 2):  25.18501pt
 number indent by parent (toc, 2):  11.71648pt
 text indent calculated (toc, 2): 20.89256pt
-number indent calculated (toc, 2): 16.42499pt
+number indent calculated (toc, 2): 11.71648pt
 number indent by \l@... (toc, 2):  16.42499pt
 text indent by \l@... (toc, 2):  25.18501pt
 number indent by parent (toc, 2):  11.71648pt
 text indent calculated (toc, 2): 20.89256pt
-number indent calculated (toc, 2): 16.42499pt
+number indent calculated (toc, 2): 11.71648pt
 number indent by \l@... (toc, 2):  16.42499pt
 text indent by \l@... (toc, 2):  25.18501pt
 number indent by parent (toc, 2):  11.71648pt
 text indent calculated (toc, 2): 20.89256pt
-number indent calculated (toc, 2): 16.42499pt
+number indent calculated (toc, 2): 11.71648pt
 number indent by \l@... (toc, 2):  16.42499pt
 text indent by \l@... (toc, 2):  25.18501pt
 number indent by parent (toc, 2):  11.71648pt
 text indent calculated (toc, 2): 20.89256pt
-number indent calculated (toc, 2): 16.42499pt
+number indent calculated (toc, 2): 11.71648pt
 number indent by \l@... (toc, 1):  0.0pt
 text indent by \l@... (toc, 1):  16.42499pt
 number indent by parent (toc, 1):  0.0pt
@@ -1375,72 +1375,23 @@ Package pdftex.def Info: lsst_logo_notext.png  used on input line 25.
  [4
 
 ]
-
-Package natbib Warning: Citation `LPM-17' on page 1 undefined on input line 50.
-
-
-
-Package natbib Warning: Citation `LSE-29' on page 1 undefined on input line 50.
-
-
-
-Package natbib Warning: Citation `LSE-30' on page 1 undefined on input line 50.
-
-
-
-Package natbib Warning: Citation `LSE-61' on page 1 undefined on input line 50.
-
-
-
-Package natbib Warning: Citation `LSE-163' on page 1 undefined on input line 52
-.
-
 File: lsst_logo_notext.png Graphic file (type png)
 <use lsst_logo_notext.png>
 Package pdftex.def Info: lsst_logo_notext.png  used on input line 53.
 (pdftex.def)             Requested size: 84.55244pt x 21.30264pt.
-[1
+ [1
 
 ]
-
-Package natbib Warning: Citation `LDM-151' on page 2 undefined on input line 54
-.
-
-
-Package natbib Warning: Citation `LDM-612' on page 2 undefined on input line 54
-.
-
-
-Package natbib Warning: Citation `LDM-151' on page 2 undefined on input line 56
-.
-
 LaTeX Font Info:    Try loading font information for TS1+fos on input line 63.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/opensans/ts1fos.fd
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/opensans/ts1fos.fd
 File: ts1fos.fd 2011/11/11 Fontinst v1.927 font definitions for TS1/fos.
 )
-
-Package natbib Warning: Citation `LSE-61' on page 2 undefined on input line 63.
-
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 63--63
 [] \T1/fos/m/n/6 tem-plateMax-Times-
  []
 
 
 LaTeX Warning: Marginpar on page 2 moved.
-
-
-Package natbib Warning: Citation `LDM-151' on page 2 undefined on input line 64
-.
-
-
-Package natbib Warning: Citation `LDM-151' on page 2 undefined on input line 64
-.
-
-
-Package natbib Warning: Citation `LSE-61' on page 2 undefined on input line 65.
-
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 65--65
@@ -1503,16 +1454,17 @@ Package pdftex.def Info: lsst_logo_notext.png  used on input line 239.
 [7]
 LaTeX Font Info:    Font shape `T1/fos/bx/it' in size <10.95> not available
 (Font)              Font shape `T1/fos/b/it' tried instead on input line 246.
-
-No file DMTN-107.bbl.
-
-Package natbib Warning: There were undefined citations.
-
+ (./DMTN-107.bbl
+File: lsst_logo_notext.png Graphic file (type png)
+<use lsst_logo_notext.png>
+Package pdftex.def Info: lsst_logo_notext.png  used on input line 50.
+(pdftex.def)             Requested size: 84.55244pt x 21.30264pt.
+ [8])
 File: lsst_logo_notext.png Graphic file (type png)
 <use lsst_logo_notext.png>
 Package pdftex.def Info: lsst_logo_notext.png  used on input line 259.
 (pdftex.def)             Requested size: 84.55244pt x 21.30264pt.
-[8]
+ [9]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 259.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 259.
  (./DMTN-107.aux)
@@ -1522,32 +1474,34 @@ Package rerunfilecheck Info: File `DMTN-107.out' has not changed.
 (rerunfilecheck)             Checksum: DBE3A638FE4898ACA189B6F310A62704;692.
  ) 
 Here is how much of TeX's memory you used:
- 22935 strings out of 492649
- 394127 string characters out of 6129622
- 508693 words of memory out of 5000000
- 26219 multiletter control sequences out of 15000+600000
+ 22976 strings out of 492649
+ 394652 string characters out of 6129622
+ 509086 words of memory out of 5000000
+ 26249 multiletter control sequences out of 15000+600000
  103608 words of font info for 141 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,15n,75p,1163b,493s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/opensans/opensans-01.enc}
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/tex
-live/2018/texmf-dist/fonts/enc/dvips/opensans/opensans-03.enc}{/usr/local/texli
-ve/2018/texmf-dist/fonts/enc/dvips/opensans/opensans-02.enc}{/usr/local/texlive
-/2018/texmf-dist/fonts/enc/dvips/opensans/opensans-04.enc}</usr/local/texlive/2
-018/texmf-dist/fonts/type1/public/opensans/OpenSans-Bold.pfb></usr/local/texliv
-e/2018/texmf-dist/fonts/type1/public/opensans/OpenSans-BoldItalic.pfb></usr/loc
-al/texlive/2018/texmf-dist/fonts/type1/public/opensans/OpenSans-Italic.pfb></us
-r/local/texlive/2018/texmf-dist/fonts/type1/public/opensans/OpenSans-Regular.pf
-b></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/rntxmi.pfb></usr/l
-ocal/texlive/2018/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/t
-exlive/2018/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/local/texlive
-/2018/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/local/texlive/2018/te
-xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on DMTN-107.pdf (12 pages, 918210 bytes).
+ 61i,15n,75p,1163b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/opensans/opensans-02.enc}
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}{/u
+sr/local/texlive/2018/texmf-dist/fonts/enc/dvips/opensans/opensans-01.enc}{/usr
+/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/
+2018/texmf-dist/fonts/enc/dvips/opensans/opensans-03.enc}{/usr/local/texlive/20
+18/texmf-dist/fonts/enc/dvips/opensans/opensans-04.enc}</usr/local/texlive/2018
+/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/tex
+live/2018/texmf-dist/fonts/type1/public/opensans/OpenSans-Bold.pfb></usr/local/
+texlive/2018/texmf-dist/fonts/type1/public/opensans/OpenSans-BoldItalic.pfb></u
+sr/local/texlive/2018/texmf-dist/fonts/type1/public/opensans/OpenSans-Italic.pf
+b></usr/local/texlive/2018/texmf-dist/fonts/type1/public/opensans/OpenSans-Regu
+lar.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+0.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/rntxmi.pfb><
+/usr/local/texlive/2018/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/l
+ocal/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/local/t
+exlive/2018/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/local/texlive/2
+018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on DMTN-107.pdf (13 pages, 939169 bytes).
 PDF statistics:
- 198 PDF objects out of 1000 (max. 8388607)
- 168 compressed objects within 2 object streams
- 35 named destinations out of 1000 (max. 500000)
+ 244 PDF objects out of 1000 (max. 8388607)
+ 211 compressed objects within 3 object streams
+ 44 named destinations out of 1000 (max. 500000)
  103 words of extra memory for PDF output out of 10000 (max. 10000000)
 
