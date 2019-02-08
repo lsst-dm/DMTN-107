@@ -13,7 +13,7 @@
 \date{\today}
 \setDocUpstreamLocation{\url{}}
 
-\setDocAbstract{ {\bf DRAFT.} This document provides a review of the options for LSST alert production during the first year of operations. The {\bf preliminary} recommendation is to generate template images from commissioning data and use them for alert production in year 1. {\bf Future work} would include a more thorough and quantitative assessment of the scientific impacts of the various options. }
+\setDocAbstract{ {\bf DRAFT.} This document provides a review of the options for LSST alert production during the first year of operations. The {\bf preliminary} recommendation is to generate template images from LSSTCam commissioning data and use them for alert production in year 1. {\bf Future work} would include a more thorough and quantitative assessment of the scientific impacts of the various options. }
 
 \setDocChangeRecord{%
 \addtohist{0}{\today}{Internal working document.}{Melissa Graham}
@@ -34,7 +34,7 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \section{Introduction} \label{sec:intro}
 
-Template images that are built from a survey's previously-obtained images are necessary in order to perform Difference Imaging Analysis (DIA) on all new images, and to produce alerts on transient, variable, and moving objects. However, during LSST operations year 1 (LOY1) there will not be many, or any, previously-obtained images from which to build templates. Furthermore, template generation is planned to occur during data release processing, which is scheduled to begin at $0.5$ years, at $1$ year, and then on a yearly basis thereafter. Thus, as it currently stands, DIA in prompt processing and alert production would only be able to start at the beginning of LOY2. 
+Template images that are built from a survey's previously-obtained images are necessary in order to perform Difference Imaging Analysis (DIA) on all new images, and to produce alerts on transient, variable, and moving objects. However, during LSST operations year 1 (LOY1) there will not be many, or any, previously-obtained images from which to build templates. Furthermore, template generation is planned to occur during data release processing, which is scheduled to begin at $0.5$ years, at $1$ year, and then on a yearly basis thereafter. Thus, as it currently stands, DIA in prompt processing and alert production would only be able to start after DR1 processing is complete, which might not be until the end of LOY1.
 
 The goal of this document is to:
 \begin{enumerate}
@@ -51,7 +51,7 @@ The goal of this document is to:
 
 {\bf DM plans regarding alert production --} The Data Products Definition Document describes the content of the alert packets, which includes {\em at least} a 12 month history and cutouts of the template image (Section 3.5.1, \citeds{LSE-163}). The DPDD does not make any relevant statements about when alert production can or must begin.
 
-{\bf DM plans regarding template generation --} The production of template images (TemplateCoadds) is planned to occur only during the $\sim$yearly Data Release processing (Section 5, \citeds{LDM-151}). Data Release 1 (DR1) is projected to begin halfway through, and DR2 at the end of, LOY1. Thus, DR2 will be the first release to cover the full LSST sky area. Since template images are required in order to do DIA and generate alerts, before DR1 there are no templates and thus no alerts. During the last six months of LOY1 there can only be alerts in regions of the sky covered by DR1, and all-sky alert production cannot start until after DR1. This is echoed in the Plans and Policies for Alert Generation and Distribution document, which states that {\it "Due to the need for Data-Release-derived templates, Alert Production cannot run at full scale and full fidelity during commissioning and the first year of operations"} (Section 2.2.1, \citeds{LDM-612}).
+{\bf DM plans regarding template generation --} The production of template images (TemplateCoadds) is planned to occur only during the $\sim$yearly Data Release processing (Section 5, \citeds{LDM-151}). Data Release 1 (DR1) is projected to begin halfway through, and DR2 at the end of, LOY1. Thus, DR2 will be the first release to cover the full LSST sky area. Since template images are required in order to do DIA and generate alerts, before DR1 there are no templates and thus no alerts, and all-sky alert production cannot start until after DR2. As DR processing is not instantaneous, the template images from DR1 might not be available until near the end of LOY1. This is echoed in the Plans and Policies for Alert Generation and Distribution document, which states that {\it "Due to the need for Data-Release-derived templates, Alert Production cannot run at full scale and full fidelity during commissioning and the first year of operations"} (Section 2.2.1, \citeds{LDM-612}).
 
 The Data Management Science Pipelines Design document specifies that in order to use a template image in DIA, it must satisfy one of two conditions. It must either (1) match the position and spatial extent of the new image and, due to differential chromatic refraction (DCR), have been generated from images with a similar airmass and parallactic angle, {\em or} (2) generated with the inclusion of a model that accounts for DCR \citedsp{LDM-151}. In this way, the mode of template production --- whether it uses airmass-matched exposures or uses a model to correct for DCR --- may further limit the area of sky with viable templates in LOY1.
 
@@ -76,7 +76,7 @@ The Data Management Science Pipelines Design document specifies that in order to
 The potential solutions considered herein are:
 \begin{enumerate}
 \item Do nothing. Do not generate alerts prior to the release of DR1 (which could be near the end of LOY1).
-\item Build templates with commissioning data. Generate alerts if and when a template image exists for a field. 
+\item Build templates with commissioning data from the LSST camera. Generate alerts if and when a template image exists for a field. 
 \item Build templates continuously (e.g., weekly, monthly) from data as it is obtained in LOY1. Generate alerts if and when a template image exists for a field.
 \item Do not build templates. Instead, use image-image differencing to generate alerts if and when a prior image exists for a field.
 \item Do not build templates. Do not use DIA. Generate alerts for all new or cataloged point sources which have changed in brightness by more than some threshold ("catalog differencing").
@@ -141,7 +141,7 @@ Science & \textcolor{red}{x} & No science from alerts (or any DIA product) until
 % % % % % % % % % % % % % % % % % %
 \subsection{Commissioning Data Templates}\label{ssec:potsol_comm}
 
-{\bf Build templates with commissioning data. Generate alerts if and when a template image exists for a field.}
+{\bf Build templates with commissioning data from the LSST camera\footnote{I.e., the full LSSTCam and not the single-raft ComCam which precedes it.}. Generate alerts if and when a template image exists for a field.}
 
 \begin{center}
 \begin{tabular}{|p{2.5cm}|p{0.3cm}|p{13cm}|}
@@ -154,14 +154,14 @@ Requirements & \textcolor{green}{\checkmark} & Acceptable minor violation of req
 \hline
 Consistency & \textcolor{green}{\checkmark} & Would produce alerts similar to the high-latency commissioning alert packets, and similar to the alerts from LOY2 and beyond. \\
 \hline
-Science & \textcolor{orange}{?} & Enables some science from alerts in LOY1, but only in areas overlapping with the commissioning survey. \\
+Science & \textcolor{orange}{?} & Enables some science from alerts in LOY1, but only in areas overlapping with the LSSTCam commissioning survey. \\
 \hline
 \end{tabular}
 \end{center}
 
-{\bf Scope --} This option may lead to a small increase in scope of commissioning by introducing the opportunity to optimize the commissioning survey areas for template-building (e.g., prioritize contiguous regions at mid-latitudes), and these options would have to be studied, debated, and decided on. This option may also lead to small increases in the scope of DM with regards to the processing of commissioning data. It is only guaranteed that DM would create as many template images from commissioning data as are needed to verify the science pipelines which create difference images, perform DIA, and generate alerts\footnote{Note that during commissioning, alert distribution may proceed with high latencies and might use non-standard interfaces.}. To create usable template images from more of the commissioning data (e.g., over {\em as wide an area as possible}) would constitute an expansion of scope.
+{\bf Scope --} This option may lead to a small increase in scope of commissioning by introducing the opportunity to optimize the commissioning survey areas for template-building (e.g., prioritize contiguous regions at mid-latitudes), and these options would have to be studied, debated, and decided on. This option may also lead to small increases in the scope of DM with regards to the processing of LSSTCam commissioning data. It is only guaranteed that DM would create as many template images from commissioning data as are needed to verify the science pipelines which create difference images, perform DIA, and generate alerts\footnote{Note that during commissioning, alert distribution may proceed with high latencies and might use non-standard interfaces.}. To create usable template images from more of the commissioning data (e.g., over {\em as wide an area as possible}) would constitute an expansion of scope.
 
-{\bf Science --} The full science impact will depend on the area covered by commissioning and the method by which template images are generated for DIA. In terms of area, it would be possible to obtain at least one image of every visible field (i.e., up to half the southern sky) in a single filter just a few days, and in all six filters $ugrizy$ in $\sim18$ days (weather permitting). However, a single image per field is insufficient to build proper template images which are "transient free", and this is essentially equivalent to the image-image differencing option (Section \ref{ssec:potsol_imgimg}). Thus, either a commissioning survey with a $>1$ month duration would be needed, and/or the commissioning templates would cover a smaller area. If template generation method requires images at a range of airmass, then this would require a longer duration or smaller area.
+{\bf Science --} The full science impact will depend on the area covered by commissioning and the method by which template images are generated for DIA. In terms of area, it would be possible to obtain at least one image of every visible field (i.e., up to half the southern sky) in a single filter just a few days, and in all six filters $ugrizy$ in $\sim18$ days (weather permitting). However, a single image per field is insufficient to build proper template images which are "transient free", and this is essentially equivalent to the image-image differencing option (Section \ref{ssec:potsol_imgimg}). Thus, either a commissioning survey with a $>1$ month duration would be needed, and/or the commissioning templates would cover a smaller area. If template generation method requires images at a range of airmass, then this would require an even longer duration or smaller area.
 
 
 % % % % % % % % % % % % % % % % % %
@@ -215,7 +215,7 @@ Science & \textcolor{red}{x} & Likely to enable science from alerts in LOY1 over
 
 {\bf Scope --} While performing image-image differencing may be possible with the existing science pipelines, the modifications, testing, and validation necessary to release DIA data products generated with image-image differencing would constitute an expansion of scope for DM. Furthermore, this option is might only feasible if the survey adopts fixed fields, such that the image-image overlap area is a substantial fraction. Without fixed field, images would have to be reconstructed into single-visit "templates" with the same area as each new image. This may also be possible with the existing science pipelines, but still constitute an expansion of scope.
 
-{\bf Consistency --} If image-image differencing is done instead of using "transient free" templates, the DIA data products would be fundamentally different from other years. 
+{\bf Consistency --} If image-image differencing is done instead of using "transient free" templates, the DIA data products would be fundamentally different from other years. Furthermore, real/bogus training would be very difficult without a consistent set of template images, and the purity/completeness levels of the alert stream could not be guaranteed, let alone set to a consistent level.
 
 {\bf Science --} The difference flux may be contaminated by the presence of an object in the earlier image, prohibiting the generation of proper host-subtracted transient light curves. While image-image differencing still shows whether a source has changed brightness, it requires additional algorithms in order to generate useful light curves \citep[e.g.,][]{2005AJ....130.2272B}.
 
@@ -236,10 +236,12 @@ Requirements & \textcolor{orange}{?} & Does not violate any formal requirements,
 \hline
 Consistency & \textcolor{red}{x} & The alert contents such as difference flux (and associated parameters) or real/bogus scores would not be available. \\
 \hline
-Science & \textcolor{orange}{?} & Likely to enable at least some science from alerts in LOY1 over most of the surveyed area, but no scientifically usable light curves. \\
+Science & \textcolor{orange}{?} & Likely to enable at least some science from alerts in LOY1 over most of the surveyed area. \\
 \hline
 \end{tabular}
 \end{center}
+
+{\bf Science --} Catalog light curves are scientifically useful for variable stars and asteroids, but less so for supernovae and objects in crowded fields.
 
 
 
