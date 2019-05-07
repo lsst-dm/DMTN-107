@@ -1,4 +1,4 @@
-\documentclass[DM,lsstdraft,toc]{lsstdoc}
+\documentclass[DM,toc]{lsstdoc}
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{latexsym}
@@ -21,8 +21,9 @@ As a potential moderate up-scope, this study presents an option to build interim
 }
 
 \setDocChangeRecord{%
-\addtohist{0}{\today}{Internal working document.}{Melissa Graham}
-\addtohist{0.1}{\today}{Review}{Leanne Guy}
+\addtohist{0}{2019-03-28}{Internal working document.}{Melissa Graham}
+\addtohist{0.1}{2019-04-24}{Review.}{Leanne Guy}
+\addtohist{1}{2019-05-07}{Reviewed by co-authors, ready for circulation.}{Melissa Graham}
 }
 
 \begin{document}
@@ -39,13 +40,14 @@ Template images are not just any other image of the same field; they are generat
 Using deep stacks as a template also minimizes the amount of noise that it contributes to the difference image (e.g., \citeds{DMTN-006,DMTN-021}).
 For the LSST, template images will either be generated for a range of airmass, or be subjected to a model correction for airmass, in order to mitigate the effects of differential chromatic refraction (DCR; \citeds{DMTN-037}).
 
-During LOY1 there will not be many images from which to build templates.
+During LOY1 there will not be many pre-existing LSST images from which to build templates\footnote{Building templates from other instrument's images is considered fully out of scope and not included in this study}.
 The current plans for commissioning would enable template generation over $\sim$10\% of the wide-fast-deep (WFD) survey area \citedsp{LSE-79}.
 During operations, images for template generation will be generated during the annual Data Release (DR) processing, which is scheduled to begin at $0.5$ years (DR1), at $1$ year (DR2), and on a yearly basis thereafter (\citeds{LSO-011}).
 It is currently undefined how DIA in Prompt processing --- and thus alert production --- should proceed in LOY1.
 The ability of the Data Management System (DMS) to produce alerts during LOY1 depends on the $\sim10\%$ of the WFD survey area covered during LSST commissioning, and the ability to increase that area depends on the processing latency for DR1, which might not finish before the end of LOY1 (\citeds{LSO-011}).  
 
 {\bf Therefore, the role of this document} is to review the formal requirements regarding alert production during LOY1 (\S~\ref{sec:req}), and to propose and assess all possible approaches to alert production in LOY1 (\S~\ref{sec:potsol}), with the goal of maximizing LSST science. A summary of the pros and cons of the various options, as well as the DM System Science Team preferred option for maximizing LSST science is provided in (\S~\ref{sec:rec}).
+
 
 \clearpage
 \section{The Relevant Requirements, Specifications, and Plans}\label{sec:req}
