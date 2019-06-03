@@ -24,6 +24,7 @@ As a potential moderate up-scope, this study presents an option to build interim
 \addtohist{0}{2019-03-28}{Internal working document.}{Melissa Graham}
 \addtohist{0.1}{2019-04-24}{Review.}{Leanne Guy}
 \addtohist{1}{2019-05-07}{Reviewed by co-authors, ready for circulation.}{Melissa Graham}
+\addtohist{1.1}{2019-06-03}{Added DMS-REQ-0271,0274 to S.2.2.}{Melissa Graham}
 }
 
 \begin{document}
@@ -67,13 +68,18 @@ Substantial changes to the template images (i.e., in depth or stacking algorithm
 
 \subsection{Alert Packet Contents}\label{ssec:req_apc}
 
-The Data Products Definition Document \citeds{LSE-163} specifies that the alert packets include {\em at least} a 12 month history, and cutouts of the template and difference images (Section 3.5.1).
-The 12 month history is not a true requirement, and should be interpreted as applying only after 12 months of LSST operations.
-Alerts issued without image cutouts would not violate any requirements, but would be a non-standard packet. 
+\citeds{LSE-61} contains a formal requirement that the alert packets include {\em at least} a 12 month history (if available), as well as cutouts of the template and difference images\dmreq{0274}.
+The availability of the 12 month history and the cutouts are also discussed in Section 3.5.1 of \citeds{LSE-163}.
+The 12 month history would not be available in LOY1, and the requirement adequately accounts for this, so it would not be violated in LOY1.
+Alerts issued without corresponding image cutouts being made available, either as part of the alert packet or via an alternative distribution mechanism, would violate this requirement.
 
-\citeds{LSE-61} contains a formal requirement that the variability characterization parameters in an alert packet include data collected during {\em at least} the past year\reqparam{diaCharacterizationCutoff}\dmreq{0319}.
+\citeds{LSE-61} contains a formal requirement that the variability characterization parameters in an alert packet be based on data collected during {\em at least} the past year\reqparam{diaCharacterizationCutoff}\dmreq{0319}.
 In LOY1, releasing variability characterization parameters in the alerts that have been calculated with $<1$ year of data would, technically, be in violation of this requirement.
 However, that is unavoidable no matter which option for alert production in LOY1 is adopted.
+
+\citeds{LSE-61} contains a formal requirement that all DIAObjects shall include identifiers of the nearest three stars and three galaxies from the Data Release Objects catalog\dmreq{0271}, and these DIAObject records will be included in the alert packet\dmreq{0274}.
+Prior to the generation of DR1 in LOY1 this requirement cannot be met, and the alert packets will not contain associations to LSST DR Objects.
+As in the above paragraph, this is unavoidable no matter which option for alert production in LOY1 is adopted.
 
 \subsection{Template Generation}\label{ssec:req_temp}
 
@@ -220,7 +226,7 @@ Therefore, releasing alerts with $<$1 year of history during LOY1 should not be 
 
 \textcolor{blue}{ Consistency -- Provides somewhat consistent data products.}
 The DIA data products that are enabled by commissioning templates would be {\em mostly} consistent in terms of contents, format, and quality, but inconsistent in terms of area covered (and the alert stream might not be continuous, as there would be no alerts for visits without existing templates).
-Prior to DR1, no {\tt DIAObject} records or alert packets would have an association with static-sky {\tt Objects} (i.e., no potential host galaxy/star information).
+Prior to DR1 no alert packets would have an association with LSST static-sky objects (i.e., no potential host galaxy/star information), but it is not a formal requirement that such associations be included in the alert packet, and this situation is unavoidable for all options for alert production prior to DR1.
 One other potential inconsistency is that when all of the images used to generate a template are from a short time window (e.g., 3 weeks), it is impossible to fully "remove" the flux of any transient or moving objects and "standardize" the flux of variable objects; this would not be an issue with DIA data products later in the survey.
 
 \textcolor{orange}{ Science -- Enables some science from DIA and alerts in LOY1.}
