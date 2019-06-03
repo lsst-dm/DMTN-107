@@ -69,7 +69,7 @@ Substantial changes to the template images (i.e., in depth or stacking algorithm
 \subsection{Alert Packet Contents}\label{ssec:req_apc}
 
 \citeds{LSE-61} contains a formal requirement that the alert packets include {\em at least} a 12 month history (if available), as well as cutouts of the template and difference images\dmreq{0274}.
-Alert packet contents are also described in Section 3.5.1 of \citeds{LSE-163}.
+The availability of the 12 month history and the cutouts are also discussed in Section 3.5.1 of \citeds{LSE-163}.
 The 12 month history would not be available in LOY1, and the requirement adequately accounts for this, so it would not be violated in LOY1.
 Alerts issued without corresponding image cutouts being made available, either as part of the alert packet or via an alternative distribution mechanism, would violate this requirement.
 
@@ -77,9 +77,11 @@ Alerts issued without corresponding image cutouts being made available, either a
 In LOY1, releasing variability characterization parameters in the alerts that have been calculated with $<1$ year of data would, technically, be in violation of this requirement.
 However, that is unavoidable no matter which option for alert production in LOY1 is adopted.
 
-\citeds{LSE-61} contains a formal requirement that all DIA sources in the Prompt Products database have a cross-match positional association with the Data Release Objects catalog\dmreq{0324}.
-\citeds{LSE-163} furthermore states that the alert packet contents will contain the identification of the matched DR Object (Section 3.5.1; however, this is not a formal requirement).
-Prior to the generation of DR1 in LOY1, the requirement in \citeds{LSE-61} will not be met, and DR Object catalog identifications will not be included in alerts.
+%\citeds{LSE-61} contains a formal requirement that all DIA sources in the Prompt Products database have a cross-match positional association with the Data Release Objects catalog\dmreq{0324}.
+\citeds{LSE-61} contains a formal requirement that all DIA objects shall include identifiers of the nearest three stars and three galaxies from the Data Release Objects catalog\dmreq{0271}.
+\citeds{LSE-163} furthermore states that the alert packet contents will contain these identifiers (Section 3.5.1; however, this is not a formal requirement).
+Prior to the generation of DR1 in LOY1 this requirement cannot be met, and the alert packets will not contain associations to LSST DR Objects. 
+As in the above paragraph, this is unavoidable no matter which option for alert production in LOY1 is adopted.
 
 \subsection{Template Generation}\label{ssec:req_temp}
 
@@ -226,7 +228,7 @@ Therefore, releasing alerts with $<$1 year of history during LOY1 should not be 
 
 \textcolor{blue}{ Consistency -- Provides somewhat consistent data products.}
 The DIA data products that are enabled by commissioning templates would be {\em mostly} consistent in terms of contents, format, and quality, but inconsistent in terms of area covered (and the alert stream might not be continuous, as there would be no alerts for visits without existing templates).
-Prior to DR1, no {\tt DIAObject} records or alert packets would have an association with static-sky {\tt Objects} (i.e., no potential host galaxy/star information).
+Prior to DR1 no alert packets would have an association with LSST static-sky objects (i.e., no potential host galaxy/star information), but it is not a formal requirement that such associations be included in the alert packet, and this situation is unavoidable for all options for alert production prior to DR1.
 One other potential inconsistency is that when all of the images used to generate a template are from a short time window (e.g., 3 weeks), it is impossible to fully "remove" the flux of any transient or moving objects and "standardize" the flux of variable objects; this would not be an issue with DIA data products later in the survey.
 
 \textcolor{orange}{ Science -- Enables some science from DIA and alerts in LOY1.}
