@@ -69,6 +69,7 @@ Substantial changes to the template images (i.e., in depth or stacking algorithm
 \subsection{Alert Packet Contents}\label{ssec:req_apc}
 
 \citeds{LSE-61} contains a formal requirement that the alert packets include {\em at least} a 12 month history (if available), as well as cutouts of the template and difference images\dmreq{0274}.
+Alert packet contents are also described in Section 3.5.1 of \citeds{LSE-163}.
 The 12 month history would not be available in LOY1, and the requirement adequately accounts for this, so it would not be violated in LOY1.
 Alerts issued without image cutouts would not violate any requirements, but would be a non-standard packet. 
 
@@ -76,9 +77,9 @@ Alerts issued without image cutouts would not violate any requirements, but woul
 In LOY1, releasing variability characterization parameters in the alerts that have been calculated with $<1$ year of data would, technically, be in violation of this requirement.
 However, that is unavoidable no matter which option for alert production in LOY1 is adopted.
 
-\citeds{LSE-61} also contains a formal requirement that all DIA sources in the Prompt Products database have a cross-match positional association with the Data Release objects catalog\dmreq{0324}.
-Since this association is part of the DIA source record, it would also be included in the alert packet \citeds{LSE-163}.
-This requirement will not be met in LOY1 for any Prompt Products generated prior to DR1.
+\citeds{LSE-61} contains a formal requirement that all DIA sources in the Prompt Products database have a cross-match positional association with the Data Release Objects catalog\dmreq{0324}.
+\citeds{LSE-163} furthermore states that the alert packet contents will contain the identification of the matched DR Object (Section 3.5.1; however, this is not a formal requirement).
+Prior to the generation of DR1 in LOY1, the requirement in \citeds{LSE-61} will not be met, and DR Object catalog identifications will not be included in alerts.
 
 \subsection{Template Generation}\label{ssec:req_temp}
 
