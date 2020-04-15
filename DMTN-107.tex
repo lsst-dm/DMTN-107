@@ -25,7 +25,7 @@ As a potential moderate up-scope, this study presents an option to build interim
 \addtohist{0.1}{2019-04-24}{Review.}{Leanne Guy}
 \addtohist{1}{2019-05-07}{Reviewed by co-authors, ready for circulation.}{Melissa Graham}
 \addtohist{1.1}{2019-06-03}{Added DMS-REQ-0271,0274 to S.2.2.}{Melissa Graham}
-\addtohist{1.2}{2019-12-17}{Updated to account for the changed plans for LSST commissioning (Jira ticket DM-22193).}{Melissa Graham}
+\addtohist{1.2}{2020-04-14}{Updated to account for the changed plans for LSST commissioning (Jira ticket DM-22193).}{Melissa Graham}
 }
 
 \begin{document}
@@ -44,9 +44,9 @@ For the LSST, template images will either be generated for a range of airmass, o
 
 During LOY1 there will not be many pre-existing LSST images from which to build templates\footnote{Building templates from other instrument's images is considered fully out of scope and not included in this study}.
 The current plans for commissioning would enable template generation over some fraction of the wide-fast-deep (WFD) survey area (\citeds{LSE-79}).
-During operations, images for template generation will be generated during the annual Data Release (DR) processing, which is scheduled to begin at $0.5$ years (DR1), at $1$ year (DR2), and on a yearly basis thereafter (\citeds{LSO-011}).
+During operations, images for template generation will be generated during the annual Data Release (DR) processing, which is scheduled to begin at $0.5$ years (DR1), at $1$ year (DR2), and on a yearly basis thereafter (LSO-011).
 It is currently undefined how DIA in Prompt processing --- and thus alert production --- should proceed in LOY1.
-The ability of the Data Management System (DMS) to produce alerts during LOY1 depends on the fraction of the WFD survey area covered during LSST commissioning, and the ability to increase that area depends on the processing latency for DR1, which might not finish before the end of LOY1 (\citeds{LSO-011}).
+The ability of the Data Management System (DMS) to produce alerts during LOY1 depends on the fraction of the WFD survey area covered during LSST commissioning, and the ability to increase that area depends on the processing latency for DR1, which might not finish before the end of LOY1 (LSO-011).
 
 {\bf Therefore, the role of this document} is to review the formal requirements regarding alert production during LOY1 (\S~\ref{sec:req}), and to propose and assess all possible approaches to alert production in LOY1 (\S~\ref{sec:potsol}), with the goal of maximizing LSST science. A summary of the pros and cons of the various options, as well as the DM System Science Team preferred option for maximizing LSST science is provided in (\S~\ref{sec:rec}).
 
@@ -101,7 +101,7 @@ This does not pose a problem since any template used in DIA during LOY1 will hav
 
 During LSST Operations the production of template images ({\tt TemplateCoadds}) is planned to occur during Data Release processing (Section 5, \citeds{LDM-151}); however, some fraction of the WFD main survey area will be imaged during commissioning (\S~\ref{ssec:potsol_comm}).
 Processing for Data Release 1 (DR1), which will be based on the first six months of data, is expected to begin halfway through LOY1, and DR2, which will be based the first 12 months of data, is expected to begin at the end of LOY1 .
-Processing is not instantaneous and will take several months; DR1 is expected to be released one year after the start of operations, and DR2 towards the end of LOY2 (\citeds{LSO-011}).
+Processing is not instantaneous and will take several months; DR1 is expected to be released one year after the start of operations, and DR2 towards the end of LOY2 (LSO-011).
 This is echoed in the Plans and Policies for Alert Generation and Distribution document, which states that {\it "Due to the need for Data-Release-derived templates, Alert Production cannot run at full scale and full fidelity during commissioning and the first year of operations"} (Section 2.2.1, \citeds{LDM-612}). 
 
 The method of template generation might also influence the quantity of alerts that could be produced in LOY1.
@@ -250,7 +250,7 @@ If Mini-Survey 1 is executed prior to the start of operations, then multi-band t
 Additional sky area would be observed as a part of the other Key Performance Metrics during Early Science Verification.
 {\bf The main takeaway is that \citeds{LSE-79} described that {\it at least} $\sim14\%$ of the WFD main survey area could have six-filter templates at the start of LOY1.}
 
-The ability to generate six-filter templates and distribute alerts during LOY1 over $14\%$ of the WFD area would enables some science, but would not maximize it under this Tech Note's working definition of maximizing the number of alerts for unique objects in LOY1.
+The ability to generate six-filter templates and distribute alerts during LOY1 over $14\%$ of the WFD area would enable some science, but would not maximize it under this Tech Note's working definition of maximizing the number of alerts for unique objects in LOY1.
 There are two options for increasing this area -- and thus the number of LOY1 alerts -- prior to the start of operations: (1) dedicate commissioning time to a template-building survey, or (2) create a template-building program for the observation scheduler which can run as "filler" during commissioning.
 
 {\bf (1) The Feasibility of a Dedicated Template-Building Survey Prior to Operations}\\
@@ -258,7 +258,7 @@ Significantly increasing the sky area with templates by observing additional are
 %For example, while it might be possible to cover $\sim50\%$ of the WFD area with one image per filter per field in $\sim$6 photometric nights worth of observing, single-image depth is insufficient for templates (\S~\ref{ssec:req_temp} and \ref{ssec:potsol_imgimg}).
 For example, it might be possible to cover $\sim$50\% of the WFD area with $3$ images per field in a single filter in $\sim$3 photometric nights, which should be sufficient to build template images that meet the noise contribution requirement\ossreq{0158}\reqparam{templateNoiseLevelY1} for LSST year 1 (\S~\ref{ssec:req_temp}).
 However, that is a very idealized minimum time estimate, which assumes 1000 visits per night and does not account for weather or dithering, factors which would $\sim$double the time estimate.
-Such a survey dedicated to template-building would not necessarily serve an independent commissioning-related purpose that would make it worth spending commissioning time on -- it remains the purview of the commissioning and operations teams whether LOY1 alert production is best served by building templates or ensuring a fully-commissioned system.
+Furthermore, such a survey dedicated to template-building might not serve an independent commissioning-related purpose that would make it worth spending (potentially limited) commissioning time on, and priorities would need to be considered.
 
 {\bf (2) A Template-Building "Filler" Program During Commissioning}\\
 During commissioning, whenever activities that require images be taken but are agnostic about their location and filter (e.g., testing telescope parameters, or troubleshooting scenarios), and a filter change and/or telescope slew would not cause an unacceptable overhead or risk (at the discretion of the commissioning team), then obtain images that would be beneficial to building templates for LOY1 alert production.
@@ -275,8 +275,10 @@ However, the science community might instead prefer to have more {\em informatio
 Furthermore, the rejection of false positives would be aided by multi-filter alert distribution, especially in the early stages as the real-bogus classifier is building up an adequate training set, which would also help to "maximize science".
 A time-average of $\sim$1 million alerts per night from $\sim$10\% of the WFD area will still be a huge increase for the science community to handle, and follow-up resources will be limited.
 {\bf Further study -- including feedback from the science community -- is required in order to determine how to prioritize the observing strategy for template-building.}
-This study should consider whether to prioritize building templates in galactic or extragalactic fields; for example, galactic variable-star science can still be done with the direct images (although this is more difficult for very crowded fields), but extragalactic transients in extended host galaxies absolutely require image subtraction for detection and analysis.
-This study should also consider the observing strategy for LOY1 if templates will be generated on a, e.g., $\sim$monthly basis as proposed in \S~\ref{ssec:potsol_cont}.
+These studies should consider whether to prioritize building templates in galactic or extragalactic fields; for example, galactic variable-star science can still be done with the direct images (although this is more difficult for very crowded fields), but extragalactic transients in extended host galaxies absolutely require image subtraction for detection and analysis.
+These studies should also consider the observing strategy for LOY1 if templates will be generated on a, e.g., $\sim$monthly basis as proposed in \S~\ref{ssec:potsol_cont}.
+Since the first version of this Tech Note, several of the Science Collaborations have begun to compile their science-based recommendations for templates and alerts during LOY1; the Transients and Variable Stars SC has two AAS research notes based on time critical and non-time critical science, \citet{2020RNAAS...4...41S} and \cite{2020RNAAS...4...40H}, and the Solar System SC has a white paper describing their plans for high-impact time-domain science in year one\footnote{\url{http://lsst-sssc.github.io/Files/lsst_templates.pdf}}.
+
 
 
 \clearpage
